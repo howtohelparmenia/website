@@ -1,0 +1,31 @@
+
+/**
+ * @file
+ * Variables.
+ * 
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+// Typography.
+$font-family: 'Open Sans', 'sans-serif';
+$font-size: 16px;
+
+// Breakpoints.
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 767px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1300px;
+
+// Layout widths.
+$layout-width-mobile: 100%;
+$layout-width-tablet-small: 480px;
+$layout-width-tablet-medium: 720px;
+$layout-width-desktop-medium: 960px;
+$layout-width-desktop-large: 1280px;
+
+// Colors.
+$color-primary-bg: #EEE;
+$color-primary-text: #222;
+$color-secondary-bg: #CCC;
+$color-secondary-text: #555;

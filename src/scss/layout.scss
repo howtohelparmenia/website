@@ -1,0 +1,130 @@
+
+/**
+ * @file
+ * Layout styles.
+ *
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+/*******************************************************************************
+ * Basic styles.
+ ******************************************************************************/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+  padding: 0;
+  margin: 0;
+}
+a {
+  cursor: pointer;
+}
+/* Basic styles end. */
+
+
+/*******************************************************************************
+ * Containers.
+ ******************************************************************************/
+.container {
+  width: $layout-width-mobile;
+  max-width: $layout-width-mobile;
+  > .inner {
+    max-width: $layout-width-desktop-large;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-large) {
+      max-width: $layout-width-desktop-medium;
+    }
+    @media (max-width: $breakpoint-medium) {
+      max-width: $layout-width-tablet-medium;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      max-width: $layout-width-tablet-small;
+    }
+  }
+}
+/* Containers end. */
+
+
+/*******************************************************************************
+ * Useful classes.
+ ******************************************************************************/
+// Menus.
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+/* Useful classes end. */
+
+
+/*******************************************************************************
+ * Header.
+ ******************************************************************************/
+// Logo.
+#logo-wrap {
+  text-align: center;
+  padding: 2em 0;
+}
+// Main menu.
+#nav-main-wrap {
+  background: $color-primary-bg;
+  color: $color-primary-text;
+  a,
+  .fake-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    > li {
+      position: relative;
+      > a,
+      > .fake-link {
+        text-transform: uppercase;
+        line-height: 40px;
+        padding: 0 1em;
+      }
+      &:hover {
+        ul {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+/* Header end. */
+
+
+/*******************************************************************************
+ * Footer.
+ ******************************************************************************/
+// Main footer.
+#footer-main-wrap {
+  margin-top: 2em;
+  padding: 2em 0;
+  background: $color-primary-bg;
+  color: $color-primary-text;
+}
+// Copyrights.
+#footer-copyrights-wrap {
+  background: $color-secondary-bg;
+  color: $color-secondary-text;
+  padding: 1em 0;
+  font-size: 0.8em;
+}
+/* Footer end. */
+
+
+/*******************************************************************************
+ * Various other styles.
+ ******************************************************************************/
+
+/* Various other styles end. */
+
