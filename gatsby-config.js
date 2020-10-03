@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `New Project`,
-    description: `Description of the new project`,
+    title: `How to Help Armenia`,
+    description: `Collection of resources and ideas for helping Armenia.`,
     author: `@aramboyajyan`,
     siteUrl: `http://localhost:8000`,
   },
@@ -31,19 +31,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [400, 600],
-          },
-        ],
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
