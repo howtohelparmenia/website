@@ -1,7 +1,7 @@
 import React from "react"
 
-import Index from "../components/index"
-import Seo from "../components/other/seo"
+import Index from "../components/layout"
+import Seo from "../components/seo"
 import Container from "../components/layout/container";
 
 const NotFoundPage = () => (

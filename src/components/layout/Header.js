@@ -5,10 +5,7 @@ import Menu from "./menu";
 
 const Header = () => (
   <>
-    <Container id="logo-wrap">
-      <Logo />
-    </Container>
-    <Container id="nav-main-wrap">
+    <Container id="header">
       <Menu />
     </Container>
   </>

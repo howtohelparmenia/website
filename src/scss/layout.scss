@@ -12,15 +12,32 @@
  ******************************************************************************/
 * {
   box-sizing: border-box;
+  border-radius: 0;
+}
+*:focus {
+  outline-style: solid;
+  outline-width: medium;
+  outline-color: #0033A0;
+}
+html {
+  overflow-y: scroll;
 }
 body {
   font-size: $font-size;
   font-family: $font-family;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
 }
+h1, h2, h3, h4, h5 {
+  color: $color-secondary-text;
+}
 a {
   cursor: pointer;
+  color: $color-red;
+}
+img {
+  vertical-align: top;
 }
 /* Basic styles end. */
 
@@ -103,6 +120,25 @@ a {
 
 
 /*******************************************************************************
+ * Form elements.
+ ******************************************************************************/
+input,
+textarea {
+  border: 2px solid $color-gray;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.25em 0.5em;
+}
+button,
+.button,
+input[type="submit"] {
+  border: 0;
+  padding: 0.5em 1em;
+}
+/* Form elements end. */
+
+
+/*******************************************************************************
  * Footer.
  ******************************************************************************/
 // Main footer.
@@ -111,6 +147,9 @@ a {
   padding: 2em 0;
   background: $color-primary-bg;
   color: $color-primary-text;
+  #social {
+    font-size: 2em;
+  }
 }
 // Copyrights.
 #footer-copyrights-wrap {
@@ -125,6 +164,96 @@ a {
 /*******************************************************************************
  * Various other styles.
  ******************************************************************************/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.hero {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 4em;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+.hero p {
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+.hero #coat-of-arms .gatsby-image-wrapper {
+  height: 300px;
+  text-align: center;
+  width: 100%;
+  img {
+    height: auto!important;
+    width: auto!important;
+  }
+}
+
+section.box {
+  width: 48%;
+  margin: 1.25em 0;
+  background: #f8f9fa;
+  padding: 2em;
+  border-radius: 2px;
+}
+section.box .title {
+  margin: 0;
+}
+section.box .content ul:last-child {
+  margin-bottom: 0;
+}
+
+#footer {
+  color: #999;
+  text-align: center;
+  padding: 5em 0;
+  background: #f8f9fa;
+  margin-top: 5em;
+}
+
+#header {
+  margin: 0 0 2em 0;
+  background: #f8f9fa;
+}
+#header .inner {
+  padding: 2.5em 0;
+}
+#header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+#header nav ul li {
+  margin: 0 1em;
+}
+#header-flag {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+#header-flag i {
+  height: 10px;
+  background: red;
+  display: block;
+}
+#languages {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+#languages img {
+  width: 24px;
+}
 /* Various other styles end. */
 

@@ -8,8 +8,8 @@
  */
 
 // Typography.
-$font-family: 'Open Sans', 'sans-serif';
-$font-size: 16px;
+$font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-size: 18px;
 
 // Breakpoints.
 $breakpoint-mobile: 480px;
@@ -25,7 +25,9 @@ $layout-width-desktop-medium: 960px;
 $layout-width-desktop-large: 1280px;
 
 // Colors.
-$color-primary-bg: #EEE;
-$color-primary-text: #222;
-$color-secondary-bg: #CCC;
-$color-secondary-text: #555;
+$color-primary-bg: #FFF;
+$color-primary-text: #4a4a4a;
+$color-secondary-bg: #f8f9fa;
+$color-secondary-text: #111;
+$color-red: #D90012;
+$color-gray: #999;
