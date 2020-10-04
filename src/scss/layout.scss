@@ -7,40 +7,6 @@
  * https://www.aram.cz/
  */
 
-/*******************************************************************************
- * Basic styles.
- ******************************************************************************/
-* {
-  box-sizing: border-box;
-  border-radius: 0;
-}
-*:focus {
-  outline-style: solid;
-  outline-width: medium;
-  outline-color: #0033A0;
-}
-html {
-  overflow-y: scroll;
-}
-body {
-  font-size: $font-size;
-  font-family: $font-family;
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
-}
-h1, h2, h3, h4, h5 {
-  color: $color-secondary-text;
-}
-a {
-  cursor: pointer;
-  color: $color-red;
-}
-img {
-  vertical-align: top;
-}
-/* Basic styles end. */
-
 
 /*******************************************************************************
  * Containers.
@@ -66,54 +32,46 @@ img {
 
 
 /*******************************************************************************
- * Useful classes.
- ******************************************************************************/
-// Menus.
-.menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
-    display: inline-block;
-  }
-}
-/* Useful classes end. */
-
-
-/*******************************************************************************
  * Header.
  ******************************************************************************/
-// Logo.
-#logo-wrap {
-  text-align: center;
-  padding: 2em 0;
-}
-// Main menu.
-#nav-main-wrap {
-  background: $color-primary-bg;
-  color: $color-primary-text;
-  a,
-  .fake-link {
-    color: inherit;
-    text-decoration: none;
+#header {
+  margin: 0 0 2em 0;
+  background: #f8f9fa;
+  .inner {
+    padding: 2.5em 0;
   }
-  ul {
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    > li {
-      position: relative;
-      > a,
-      > .fake-link {
-        text-transform: uppercase;
-        line-height: 40px;
-        padding: 0 1em;
-      }
-      &:hover {
-        ul {
-          display: flex;
-        }
-      }
+    justify-content: center;
+    li {
+      margin: 0 1em;
     }
+  }
+}
+#header-flag {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  top: 0;
+  left: 0;
+  i {
+    height: 10px;
+    background: red;
+    display: block;
+  }
+}
+#languages {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  img {
+    width: 24px;
   }
 }
 /* Header end. */
@@ -134,6 +92,12 @@ button,
 input[type="submit"] {
   border: 0;
   padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: $border-radius;
+  cursor: pointer;
 }
 /* Form elements end. */
 
@@ -141,119 +105,75 @@ input[type="submit"] {
 /*******************************************************************************
  * Footer.
  ******************************************************************************/
-// Main footer.
-#footer-main-wrap {
-  margin-top: 2em;
-  padding: 2em 0;
-  background: $color-primary-bg;
-  color: $color-primary-text;
-  #social {
-    font-size: 2em;
-  }
-}
-// Copyrights.
-#footer-copyrights-wrap {
-  background: $color-secondary-bg;
-  color: $color-secondary-text;
-  padding: 1em 0;
-  font-size: 0.8em;
-}
-/* Footer end. */
-
-
-/*******************************************************************************
- * Various other styles.
- ******************************************************************************/
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.hero {
-  text-align: center;
-  margin-top: 5em;
-  margin-bottom: 4em;
-}
-.hero h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-.hero p {
-  margin-top: 0.5em;
-  font-size: 1.25em;
-}
-.hero #coat-of-arms .gatsby-image-wrapper {
-  height: 300px;
-  text-align: center;
-  width: 100%;
-  img {
-    height: auto!important;
-    width: auto!important;
-  }
-}
-
-section.box {
-  width: 48%;
-  margin: 1.25em 0;
-  background: #f8f9fa;
-  padding: 2em;
-  border-radius: 2px;
-}
-section.box .title {
-  margin: 0;
-}
-section.box .content ul:last-child {
-  margin-bottom: 0;
-}
-
 #footer {
   color: #999;
   text-align: center;
   padding: 5em 0;
   background: #f8f9fa;
-  margin-top: 5em;
+  margin-top: 4em;
+  #social {
+    font-size: 2.5em;
+    margin: 0;
+  }
 }
+/* Footer end. */
 
-#header {
-  margin: 0 0 2em 0;
-  background: #f8f9fa;
-}
-#header .inner {
-  padding: 2.5em 0;
-}
-#header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+/*******************************************************************************
+ * Tiles.
+ ******************************************************************************/
+.tiles {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .tile {
+    width: 48%;
+    margin-bottom: 2em;
+    background: $color-light-blue;
+    padding: 1em 1.5em;
+    border-radius: 2px;
+    h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      svg {
+        margin: 0 0.25em 0 0;
+        vertical-align: top;
+        width: 1.5em;
+      }
+    }
+  }
 }
-#header nav ul li {
-  margin: 0 1em;
+/* Tiles end. */
+
+
+/*******************************************************************************
+ * Hero.
+ ******************************************************************************/
+.hero {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  p {
+    margin-top: 0.5em;
+    font-size: 1.25em;
+  }
+  #coat-of-arms .gatsby-image-wrapper {
+    max-width: 150px;
+    height: 144px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
-#header-flag {
-  position: absolute;
-  width: 60px;
-  height: 30px;
-  display: flex;
-  top: 0;
-  left: 0;
-}
-#header-flag i {
-  height: 10px;
-  background: red;
-  display: block;
-}
-#languages {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 20px;
-  right: 0;
-}
-#languages img {
-  width: 24px;
-}
+/* Hero end. */
+
+
+/*******************************************************************************
+ * Various other styles.
+ ******************************************************************************/
 /* Various other styles end. */
 

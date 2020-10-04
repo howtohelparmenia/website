@@ -25,9 +25,13 @@ $layout-width-desktop-medium: 960px;
 $layout-width-desktop-large: 1280px;
 
 // Colors.
-$color-primary-bg: #FFF;
+$color-white: #FFF;
 $color-primary-text: #4a4a4a;
-$color-secondary-bg: #f8f9fa;
+$color-blue: #0033A0;
+$color-light-blue: #f8f9fa;
 $color-secondary-text: #111;
 $color-red: #D90012;
 $color-gray: #999;
+
+// Misc.
+$border-radius: 2px;

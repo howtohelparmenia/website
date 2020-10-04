@@ -2,15 +2,20 @@ import React from "react"
 
 import Index from "../components/layout"
 import Seo from "../components/seo"
-import Container from "../components/layout/container";
+import Hero from "../components/elements/Hero";
+
+import {
+  Link
+} from "gatsby";
 
 const NotFoundPage = () => (
   <Index>
     <Seo title="Page Not Found" />
-    <Container>
+    <Hero>
       <h1>Page Not Found</h1>
-      <p>The page you requested could not be found.</p>
-    </Container>
+      <p>The page you requestsed could not be found.</p>
+      <p><Link to="/">Click here</Link> to go back to the home page.</p>
+    </Hero>
   </Index>
 )
 

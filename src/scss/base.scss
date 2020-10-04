@@ -1,0 +1,76 @@
+
+/**
+ * @file
+ * Base styles.
+ *
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+
+/*******************************************************************************
+ * General styles.
+ ******************************************************************************/
+* {
+  box-sizing: border-box;
+  border-radius: 0;
+}
+*:focus {
+  outline-style: solid;
+  outline-width: medium;
+  outline-color: #0033A0;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5 {
+  color: $color-secondary-text;
+}
+a {
+  cursor: pointer;
+  color: $color-red;
+}
+img {
+  vertical-align: top;
+}
+ul li,
+ol li {
+  margin: 0.25em 0;
+}
+/* General styles end. */
+
+
+/*******************************************************************************
+ * Useful classes.
+ ******************************************************************************/
+// Menus.
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+// Alignment.
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+// Lead paragraphs.
+.lead {
+  font-size: 1.5em;
+}
+/* Useful classes end. */

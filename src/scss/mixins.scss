@@ -7,4 +7,12 @@
  * https://www.aram.cz/
  */
 
-//
+// Visually hidden styles. This should be used for all elements that should
+// still stay visible for screen readers.
+%visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
