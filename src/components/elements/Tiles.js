@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import PropTypes from "prop-types";
 
 export const Tiles = ({ children }) => (
   <div className="tiles">
@@ -6,11 +7,20 @@ export const Tiles = ({ children }) => (
   </div>
 )
 
-export const Tile = ({ children }) => (
-  <div className="tile">
-    { children }
-  </div>
-)
+export const Tile = ({ className, children }) => {
+  const classNames = `tile ${className}`;
+  return (
+    <div className={ classNames }>
+      { children }
+    </div>
+  )
+}
+Tile.propTypes = {
+  className: PropTypes.string,
+}
+Tile.defaultProps = {
+  className: '',
+}
 
 export const TileTitle = ({ children }) => (
   <div className="tile-title">

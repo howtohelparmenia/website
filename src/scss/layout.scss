@@ -98,6 +98,16 @@ input[type="submit"] {
   color: $color-white;
   border-radius: $border-radius;
   cursor: pointer;
+  &.no-styles {
+    color: inherit;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  &.link {
+    color: $color-red;
+    text-decoration: underline;
+  }
 }
 /* Form elements end. */
 
@@ -130,7 +140,7 @@ input[type="submit"] {
     width: 48%;
     margin-bottom: 2em;
     background: $color-light-blue;
-    padding: 1em 1.5em;
+    padding: 2em 1.75em;
     border-radius: 2px;
     h2 {
       margin-top: 0;
@@ -152,15 +162,27 @@ input[type="submit"] {
  ******************************************************************************/
 .hero {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 4em;
   margin-bottom: 4em;
+  position: relative;
+  & > .inner {
+    position: relative;
+  }
   h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin: 0.5em 0 0 0;
   }
   p {
     margin-top: 0.5em;
     font-size: 1.25em;
+  }
+  .action {
+    position: absolute;
+    top: 0.45em;
+    display: flex;
+    font-size: 2em;
+    line-height: 1;
+    color: $color-gray;
   }
   #coat-of-arms .gatsby-image-wrapper {
     max-width: 150px;
@@ -170,6 +192,65 @@ input[type="submit"] {
   }
 }
 /* Hero end. */
+
+
+/*******************************************************************************
+ * iOS switch.
+ *
+ * Taken from https://www.cssscript.com/demo/realistic-ios-switch-pure-css/
+ ******************************************************************************/
+.form-switch {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+.form-switch i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+.form-switch:active input:checked + i::after { transform: translate3d(16px, 2px, 0); }
+.form-switch input { display: none; }
+.form-switch input:checked + i { background-color: #4BD763; }
+.form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
+.form-switch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
+/* iOS switch end. */
 
 
 /*******************************************************************************

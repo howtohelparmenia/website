@@ -73,4 +73,8 @@ ol li {
 .lead {
   font-size: 1.5em;
 }
+// Visually hidden content for screen readers.
+.visually-hidden {
+  @extend %visuallyHidden;
+}
 /* Useful classes end. */

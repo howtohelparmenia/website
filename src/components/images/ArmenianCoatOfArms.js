@@ -26,7 +26,11 @@ const ArmenianCoatOfArms = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} width="300" alt="Armenian Coat of Arms" />
+  return (
+    <div id="coat-of-arms">
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} width="300" alt="Armenian Coat of Arms" />
+    </div>
+  )
 }
 
 export default ArmenianCoatOfArms
