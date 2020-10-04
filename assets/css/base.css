@@ -1,0 +1,84 @@
+/**
+ * @file
+ * Base styles.
+ *
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+
+/*******************************************************************************
+ * General styles.
+ ******************************************************************************/
+* {
+  box-sizing: border-box;
+  border-radius: 0;
+}
+*:focus {
+  outline-style: solid;
+  outline-width: medium;
+  outline-color: #0033A0;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font-size: 18px;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5 {
+  color: #111;
+}
+a {
+  cursor: pointer;
+  color: #D90012;
+}
+img {
+  vertical-align: top;
+}
+ul li,
+ol li {
+  margin: 0.25em 0;
+}
+/* General styles end. */
+
+
+/*******************************************************************************
+ * Useful classes.
+ ******************************************************************************/
+/* Menus. */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  display: inline-block;
+}
+
+/* Alignment. */
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+/* Lead paragraphs. */
+.lead {
+  font-size: 1.5em;
+}
+/* Visually hidden content for screen readers. */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* Useful classes end. */

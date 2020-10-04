@@ -1,0 +1,26 @@
+
+/**
+ * @file
+ * Page specific CSS.
+ * 
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+
+/*******************************************************************************
+ * Home page.
+ ******************************************************************************/
+.profession-open .filter-resource,
+body:not(.profession-open) .filter-profession {
+  opacity: 0.3;
+}
+.profession-open .filter-profession,
+body:not(.profession-open) .filter-resource {
+  opacity: 1;
+}
+body.profession-open .resource-tile,
+body:not(.profession-open) .profession-tile {
+  display: none;
+}
+/* Home page end. */

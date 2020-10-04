@@ -1,0 +1,257 @@
+/**
+ * @file
+ * Layout styles.
+ *
+ * Created by: Aram Boyajyan
+ * https://www.aram.cz/
+ */
+
+
+/*******************************************************************************
+ * Containers.
+ ******************************************************************************/
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+.container > .inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (max-width: 1300px) {
+  .container > .inner {
+    max-width: 960px;
+  }
+}
+@media (max-width: 960px) {
+  .container > .inner {
+    max-width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .container > .inner {
+    max-width: 480px;
+  }
+}
+/* Containers end. */
+
+
+/*******************************************************************************
+ * Header.
+ ******************************************************************************/
+#header {
+  margin: 0 0 2em 0;
+  background: #f8f9fa;
+}
+#header .inner {
+  padding: 2.5em 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 1em;
+}
+/* Header end. */
+
+
+/*******************************************************************************
+ * Form elements.
+ ******************************************************************************/
+input,
+textarea {
+  border: 2px solid #999;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.25em 0.5em;
+}
+button,
+.button,
+input[type="submit"] {
+  border: 0;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #0033A0;
+  color: #FFF;
+  border-radius: 2px;
+  cursor: pointer;
+}
+button.no-styles,
+.button.no-styles,
+input[type="submit"].no-styles {
+  color: inherit;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+button.link,
+.button.link,
+input[type="submit"].link {
+  color: #D90012;
+  text-decoration: underline;
+}
+/* Form elements end. */
+
+
+/*******************************************************************************
+ * Footer.
+ ******************************************************************************/
+#footer {
+  color: #999;
+  text-align: center;
+  padding: 5em 0;
+  background: #f8f9fa;
+  margin-top: 4em;
+}
+#footer #social {
+  font-size: 2.5em;
+  margin: 0;
+}
+/* Footer end. */
+
+
+/*******************************************************************************
+ * Tiles.
+ ******************************************************************************/
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tile {
+  width: 48%;
+  margin-bottom: 2em;
+  background: #f8f9fa;
+  padding: 2em 1.75em;
+  border-radius: 2px;
+}
+.tile h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+.tile i {
+  margin: 0 0.25em 0 0;
+  vertical-align: top;
+  width: 1.5em;
+  text-align: center;
+}
+/* Tiles end. */
+
+
+/*******************************************************************************
+ * Hero.
+ ******************************************************************************/
+.hero {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  position: relative;
+}
+.hero > .inner {
+  position: relative;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0 0 0;
+}
+.hero p {
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+.hero .action {
+  position: absolute;
+  top: 0.45em;
+  display: flex;
+  font-size: 2em;
+  line-height: 1;
+  color: #999;
+  text-decoration: none;
+}
+#coat-of-arms .gatsby-image-wrapper {
+  max-width: 150px;
+  height: 144px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* Hero end. */
+
+
+/*******************************************************************************
+ * iOS switch.
+ *
+ * Taken from https://www.cssscript.com/demo/realistic-ios-switch-pure-css/
+ ******************************************************************************/
+.form-switch {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+.form-switch i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+.form-switch:active input:checked + i::after {
+  transform: translate3d(16px, 2px, 0);
+}
+.form-switch input {
+  display: none;
+}
+.form-switch input:checked + i {
+  background-color: #4BD763;
+}
+.form-switch input:checked + i::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+.form-switch input:checked + i::after {
+  transform: translate3d(22px, 2px, 0);
+}
+/* iOS switch end. */
+
+
+/*******************************************************************************
+ * Various other styles.
+ ******************************************************************************/
+/* Various other styles end. */
