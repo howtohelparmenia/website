@@ -26,6 +26,8 @@
 @media (max-width: 960px) {
   .container > .inner {
     max-width: 720px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -141,6 +143,11 @@ input[type="submit"].link {
   width: 1.5em;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .tile {
+    width: 100%;
+  }
+}
 /* Tiles end. */
 
 
@@ -173,11 +180,19 @@ input[type="submit"].link {
   color: #999;
   text-decoration: none;
 }
-#coat-of-arms .gatsby-image-wrapper {
-  max-width: 150px;
-  height: 144px;
-  width: 100%;
-  margin: 0 auto;
+@media (max-width: 767px) {
+  .hero {
+    margin: 2em 0;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .hero img {
+    width: 120px;
+  }
 }
 /* Hero end. */
 
@@ -201,7 +216,7 @@ input[type="submit"].link {
   margin-right: 0.5em;
   width: 46px;
   height: 26px;
-  background-color: #e6e6e6;
+  background-color: #f69317;
   border-radius: 23px;
   vertical-align: text-bottom;
   transition: all 0.3s linear;
@@ -212,7 +227,7 @@ input[type="submit"].link {
   left: 0;
   width: 42px;
   height: 22px;
-  background-color: #fff;
+  background-color: #f6992d;
   border-radius: 11px;
   transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
   transition: all 0.25s linear;
@@ -240,7 +255,7 @@ input[type="submit"].link {
   display: none;
 }
 .form-switch input:checked + i {
-  background-color: #4BD763;
+  background-color: #1b4ca2;
 }
 .form-switch input:checked + i::before {
   transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
