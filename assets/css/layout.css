@@ -17,6 +17,7 @@
 .container > .inner {
   max-width: 1280px;
   margin: 0 auto;
+  word-wrap: break-word;
 }
 @media (max-width: 1300px) {
   .container > .inner {
